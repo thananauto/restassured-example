@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.0'
 
 services:
   gorest-api:
@@ -6,7 +6,10 @@ services:
       context: .
       dockerfile: ./Dockerfile
     command:
-      - mvn clean test
+      - mvn test
     container_name: gorest_api
     volumes:
-      - $PWD/target:/app/target/result
+      - $PWD/output:/app/target/result
+
+
+
