@@ -38,6 +38,5 @@ jobs:
       - name: Stop containers and all services
         if: always()
         run: |
-          docker wait gorest_api
-          docker rm gorest_api
+          test_wait.sh
           docker-compose -f "docker-compose.yml" down

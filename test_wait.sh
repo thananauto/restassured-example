@@ -6,5 +6,6 @@ while [ $exit_code -eq "0" ];
 do
     echo “Job has encountered some error.”
     echo container code :$exit_code
+    exit_code="$(docker wait gorest-api)"
 done
 
