@@ -9,4 +9,4 @@ services:
       - mvn clean test
     container_name: gorest_api
     volumes:
-      - $PWD:/app/target/result
+      - $PWD/target:/app/target/result
