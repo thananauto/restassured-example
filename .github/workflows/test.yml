@@ -40,3 +40,15 @@ jobs:
         run: |
           bash test_wait.sh
           docker-compose -f "docker-compose.yml" down
+
+      - name: Use the Upload Artifact GitHub Action
+        uses: actions/upload-artifact@v2
+        with:
+          name: assets-for-download
+          path: output
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
