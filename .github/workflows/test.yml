@@ -19,6 +19,9 @@ on:
     - cron: "0 2 * * 1-5"
   workflow_dispatch:
 
+permissions:
+  id-token: write
+
 jobs:
   api-test:
     runs-on: ubuntu-latest

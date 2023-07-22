@@ -11,7 +11,7 @@ public final class ExtentReport {
 
     public static void initReports(){
          extentReports = new ExtentReports();
-        ExtentSparkReporter reporter = new ExtentSparkReporter("./target/result/extent-report.html");
+        ExtentSparkReporter reporter = new ExtentSparkReporter("./target/result/index.html");
         reporter.config().setReportName("API Extent Report");
         extentReports.attachReporter(reporter);
         extentReports.setSystemInfo("Author", "Thanan");
