@@ -38,5 +38,5 @@ jobs:
       - name: Stop containers and all services
         if: always()
         run: |
-          sudo test_wait.sh
+          bash test_wait.sh
           docker-compose -f "docker-compose.yml" down
