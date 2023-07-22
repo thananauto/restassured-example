@@ -16,3 +16,6 @@ The job is configured in `git-workflow` for daily execution
 1. Clone this repo
 2. execute `mvn clean test`
 3. Navigate to `./target/reports/*` to see the execution report
+
+
+Find the latest test execution report [here](https://thananauto.github.io/restassured-example/index.html)
