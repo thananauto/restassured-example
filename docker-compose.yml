@@ -5,8 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    command:
-      - mvn test
+    image: restassured
     container_name: gorest_api
     volumes:
       - $PWD/output:/app/target/result

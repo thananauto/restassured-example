@@ -3,4 +3,4 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 COPY testNg.xml .
-CMD ["mvn", "clean", "test"]
+CMD ["mvn", "test"]
