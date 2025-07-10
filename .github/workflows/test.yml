@@ -15,8 +15,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  schedule:
-    - cron: "0 2 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -44,7 +42,7 @@ jobs:
           docker-compose -f "docker-compose.yml" down
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           # Upload entire repository
           path: './output'
@@ -59,4 +57,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
