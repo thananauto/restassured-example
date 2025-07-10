@@ -40,7 +40,7 @@ jobs:
         run: |
           bash test_wait.sh
           docker compose -f docker-compose.yml down
-          
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './output'
+          path: './target/result'
 
   deploy:
     needs: api-test
