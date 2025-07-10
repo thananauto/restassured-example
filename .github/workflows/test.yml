@@ -57,3 +57,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+        with:
+          branch: gh-pages  # The branch that GitHub Pages is configured to deploy from
+          folder: output     # The folder where your build output files are located
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
