@@ -33,13 +33,13 @@ jobs:
 
       - name: Kick start the test from docker compose file
         run: |
-            docker-compose -f docker-compose.yml up --build -d --abort-on-container-exit
+            docker compose -f docker-compose.yml up --build -d --abort-on-container-exit
 
       - name: Stop containers and all services
         if: always()
         run: |
           bash test_wait.sh
-          docker-compose -f docker-compose.yml down
+          docker compose -f docker-compose.yml down
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
