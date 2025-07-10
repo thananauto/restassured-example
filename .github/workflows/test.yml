@@ -40,6 +40,9 @@ jobs:
         run: |
           bash test_wait.sh
           docker compose -f docker-compose.yml down
+          
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
